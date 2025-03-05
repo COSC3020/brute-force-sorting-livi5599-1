@@ -48,10 +48,10 @@ function getAllPermutations(arr) { // O(n!)
 
     for (var i = 0; i < arr.length; i++) { // runs n times -> O(n) -> total runtime = O(n!)
         var first = arr[i]; // O(1)
-        var rest = arr.slice(0, i).concat(arr.slice(i + 1)); // O(n^2)
+        var rest = arr.slice(0, i).concat(arr.slice(i + 1)); // O(n)
         var subPerms = getAllPermutations(rest); // O(n!)
-        for (var j = 0; j < subPerms.length; j++) { // runs n times -> O(n) -> total runtime = O(n^3)
-            results.push([first].concat(subPerms[j])); // O(n^2)
+        for (var j = 0; j < subPerms.length; j++) { // runs n times -> O(n) -> total runtime = O(n^2)
+            results.push([first].concat(subPerms[j])); // O(n)
         }
     }
     return results; // O(1)
