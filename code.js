@@ -1,4 +1,4 @@
-function permutationSort(a) { // O(n!)
+function permutationSort(a) { // O(n*n!)
     var counter = 1; // O(1)
     var permutations = []; // O(1)
     permutations.push([...a]); // O(n)
